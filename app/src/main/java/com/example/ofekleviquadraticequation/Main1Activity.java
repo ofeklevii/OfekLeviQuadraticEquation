@@ -66,6 +66,7 @@ public class Main1Activity extends AppCompatActivity {
         ans.setText("X1=" + X1 + " , "+" X2=" + X2);
     }
 
+    //חזרה למסך 1
     public void back(View view) {
         Intent intent = new Intent(Main1Activity.this, MainActivity.class);
         intent.putExtra("X1", X1);
