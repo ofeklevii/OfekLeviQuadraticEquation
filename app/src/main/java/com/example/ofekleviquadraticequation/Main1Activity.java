@@ -1,5 +1,6 @@
 package com.example.ofekleviquadraticequation;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,6 @@ public class Main1Activity extends AppCompatActivity {
     TextView ans;
     ImageView parab1;
     String X1, X2;
-    //Double root,root1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,12 +68,10 @@ public class Main1Activity extends AppCompatActivity {
 
     //חזרה למסך 1
     public void back(View view) {
-        Intent intent = new Intent(Main1Activity.this, MainActivity.class);
-        intent.putExtra("X1", X1);
-        intent.putExtra("X2", X2);
-        intent.putExtra("a",a);
-        intent.putExtra("b",b);
-        intent.putExtra("c",c);
-        startActivity(intent);
+        Intent ti = new Intent(Main1Activity.this, MainActivity.class);
+        ti.putExtra("X1",X1);
+        ti.putExtra("X2",X2);
+        setResult(Activity.RESULT_OK,ti);
+        finish();
     }
 }
