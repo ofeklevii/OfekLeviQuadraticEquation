@@ -41,15 +41,15 @@ public class Main1Activity extends AppCompatActivity {
         root = (double) (b*b-4*a*c);
         if(root==0 && a>0)   //פרבולה מחייכת נקודת חיתוך אחד
             parab1.setImageResource(R.drawable.parab1point2);
-        if(root>0 && a>0)   //פרבולה מחייכת שתי נקודות חיתוך
+        else if(root>0 && a>0)   //פרבולה מחייכת שתי נקודות חיתוך
             parab1.setImageResource(R.drawable.parab2points2);
-        if(root<0 && a>0)   //פרבולה מחייכת מרחפת
+        else if(root<0 && a>0)   //פרבולה מחייכת מרחפת
             parab1.setImageResource(R.drawable.parabmerahef2);
-        if(root==0 && a<0)   //פרבולה עצובה נקודת חיתוך אחת
+        else if(root==0 && a<0)   //פרבולה עצובה נקודת חיתוך אחת
             parab1.setImageResource(R.drawable.parab1point1);
-        if(root>0 && a<0)    //פרבולה עצובה שתי נקודות חיתוך
+        else if(root>0 && a<0)    //פרבולה עצובה שתי נקודות חיתוך
             parab1.setImageResource(R.drawable.parab2points1);
-        if(root<0 && a<0)   //פרבולה עצובה מרחפת
+        else if(root<0 && a<0)   //פרבולה עצובה מרחפת
             parab1.setImageResource(R.drawable.parabmerahef1);
 
         //חישוב פתרון המשוואה הריבועית
